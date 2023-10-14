@@ -1,0 +1,30 @@
+
+-- Insert sample data
+INSERT INTO events (title, description, location, date_time)
+VALUES
+    ('Event 1', 'Description for Event 1', 'Location 1', '2023-10-15 15:00:00'),
+    ('Event 2', 'Description for Event 2', 'Location 2', '2023-11-20 18:30:00'),
+    ('Event 3', 'Description for Event 3', 'Location 3', '2024-01-05 10:00:00');
+
+-- Query to retrieve upcoming events
+SELECT * FROM events
+WHERE date_time > NOW()
+ORDER BY date_time;
+
+
+
+-- Insert sample data
+INSERT INTO youtube_videos (title, video_link, thumbnail_url, description, publish_date, view_count, duration)
+VALUES
+    ('Video 1', 'https://www.youtube.com/watch?v=VIDEO_ID_1', 'https://example.com/thumbnail1.jpg', 'Description for Video 1', '2023-10-15', 10000, '00:10:30'),
+    ('Video 2', 'https://www.youtube.com/watch?v=VIDEO_ID_2', 'https://example.com/thumbnail2.jpg', 'Description for Video 2', '2023-11-20', 5000, '00:08:45'),
+    ('Video 3', 'https://www.youtube.com/watch?v=VIDEO_ID_3', 'https://example.com/thumbnail3.jpg', 'Description for Video 3', '2024-01-05', 7500, '00:12:15');
+
+
+
+-- Insert sample data
+INSERT INTO welcome_youtube_videos (title, video_link, thumbnail_url1, thumbnail_url2, thumbnail_url3, description, thumbnail_link, status, start_time)
+VALUES
+    ('Video 1', 'https://www.youtube.com/watch?v=VIDEO_ID_1', 'https://example.com/thumbnail1.jpg', 'https://example.com/thumbnail2.jpg', 'https://example.com/thumbnail3.jpg', 'Description for Video 1', 'https://www.youtube.com/watch?v=VIDEO_ID_1', 0,  '00:02:45'),
+    ('Video 2', 'https://www.youtube.com/watch?v=VIDEO_ID_2', 'https://example.com/thumbnail4.jpg', 'https://example.com/thumbnail5.jpg', 'https://example.com/thumbnail6.jpg', 'Description for Video 2', 'https://www.youtube.com/watch?v=VIDEO_ID_1', 0,  '00:01:30'),
+    ('Video 3', 'https://www.youtube.com/watch?v=VIDEO_ID_3', 'https://example.com/thumbnail7.jpg', 'https://example.com/thumbnail8.jpg', 'https://example.com/thumbnail9.jpg', 'Description for Video 3', 'https://www.youtube.com/watch?v=VIDEO_ID_1', 1,  '00:03:00');

@@ -1,0 +1,23 @@
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+RewriteRule ^add-admin/?$ add-admin.php [L,NC]
+RewriteRule ^edit-admin/?$ edit-admin.php [L,NC]
+
+RewriteRule ^home/?$ index.php [L,NC]
+RewriteRule ^services/?$ services.php [L,NC]
+RewriteRule ^service/?$ service.php [L,NC]
+RewriteRule ^edit-s/?$ edit-s.php [L,NC]
+RewriteRule ^edit-user/?$ edit-user.php [L,NC]
+
+RewriteRule ^change-password/?$ change-password.php [L,NC]
+RewriteRule ^forgot-password/?$ forgot-password.php [L,NC]
+RewriteRule ^add/?$ add.php [L,NC]
+RewriteRule ^login/?$ login.php
+RewriteRule ^edit-service/?$ edit-service.php
+RewriteRule ^delete/?$ delete.php
+RewriteRule ^users/?$ users.php [L,NC]
+
+RewriteRule ^logout/?$ logout.php
